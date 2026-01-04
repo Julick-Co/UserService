@@ -20,9 +20,9 @@ message GetProfileByNicknameRequest {
 }
 
 message UpdateProfileResponse {
-  UserProfile userProfile = 1;
+  UserProfile user_profile = 1;
 }
 
 message GetProfileByNicknameResponse {
-  UserProfile userProfile = 1;
+  UserProfile user_profile = 1;
 }
