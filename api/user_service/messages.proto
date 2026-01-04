@@ -34,3 +34,22 @@ message UserProfile{
 message GetProfileByIDRequest{
   int32 id = 1;
 }
+
+message UpdateProfileRequest {
+  string user_id = 1;
+  optional string nickname = 2;
+  optional string bio = 3;
+  optional string avatar_url = 4;
+}
+
+message GetProfileByNicknameRequest {
+  string nickname = 1;
+}
+
+message UpdateProfileResponse {
+  UserProfile user_profile = 1;
+}
+
+message GetProfileByNicknameResponse {
+  UserProfile user_profile = 1;
+}

@@ -17,4 +17,14 @@ service UserService {
 
   // GetGetProfileByID - get profile by id
   rpc GetProfileByID(GetProfileByIDRequest) returns (UserProfile){}
+
+  // Обновляет профиль пользователя
+  // Принимает UpdateProfileRequest и возвращает UpdateProfileResponse
+  rpc UpdateProfile(UpdateProfileRequest) returns (UpdateProfileResponse) {}
+
+  // Получает профиль пользователя по никнейму
+  // Принимает GetProfileByNicknameRequest и возвращает GetProfileByNicknameResponse
+  rpc GetProfileByNickname(GetProfileByNicknameRequest)
+      returns (GetProfileByNicknameResponse) {}
+
 }
