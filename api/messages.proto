@@ -1,0 +1,17 @@
+message CreateProfileRequest{
+  required int64  user_id = 1;
+  required string nickname = 2;
+  optional string bio = 3;
+  optional string avatar_url = 4;
+}
+
+message UserProfile{
+  required int64 user_id = 1;
+  required string nickname = 2;
+  optional string bio = 3;
+  optional string avatar_url = 4;
+}
+
+message GetProfileByIDRequest{
+  required int32 id = 1;
+}
