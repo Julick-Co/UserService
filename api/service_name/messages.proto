@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package UserService.api;
+
+option go_package = "pkg/api/user;user";
+
+message UserProfile {
+
+}
+
+message UpdateProfileRequest {
+  string user_id = 1;
+  optional string nickname = 2;
+  optional string bio = 3;
+  optional string avatar_url = 4;
+}
+
+message GetProfileByNicknameRequest {
+  string nickname = 1;
+}
+
+message UpdateProfileResponse {
+  UserProfile userProfile = 1;
+}
+
+message GetProfileByNicknameResponse {
+  UserProfile userProfile = 1;
+}
