@@ -11,4 +11,10 @@ service UserService {
 
   // Поиск по никнейму
   rpc SearchByNickname(SearchByNicknameRequest) returns (SearchByNicknameResponse) {}
+
+  // CreateProfile - create profile
+  rpc CreateProfile(CreateProfileRequest) returns (UserProfile){}
+
+  // GetGetProfileByID - get profile by id
+  rpc GetProfileByID(GetProfileByIDRequest) returns (UserProfile){}
 }
