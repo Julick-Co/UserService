@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package UserService.api;
+
+option go_package = "github.com/VladislavVoronov/UserService/pkg/api/user;user";
+
+// SearchByNicknameRequest - запрос на получение списка юзеров по никнейму
+message SearchByNicknameRequest {
+  // запрос
+  string query = 1 [json_name = "query"];
+  // пагинация количества
+  int32 limit = 2 [json_name = "limit"];
+}
+
+// SearchByNicknameResponse - ответ на получение списка юзеров по никнейму
+message SearchByNicknameResponse {
+  repeated UserProfile results = 1;
+}
+
+message CreateProfileRequest{
+  int64  user_id = 1;
+  string nickname = 2;
+  optional string bio = 3;
+  optional string avatar_url = 4;
+}
+
+message UserProfile{
+  int64 user_id = 1;
+  string nickname = 2;
+  optional string bio = 3;
+  optional string avatar_url = 4;
+}
+
+message GetProfileByIDRequest{
+  int32 id = 1;
+}
