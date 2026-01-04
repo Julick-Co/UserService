@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package UserService.api;
+
+option go_package = "github.com/VladislavVoronov/UserService/pkg/api/user;user";
+
+import "messages.proto";
+
+// UserService - сервис управлением юзеров
+service UserService {
+
+  // Поиск по никнейму
+  rpc SearchByNickname(SearchByNicknameRequest) returns (SearchByNicknameResponse) {}
+}

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package UserService.api;
+
+option go_package = "pkg/api/user;user";
+
+// UserProfile - профиль юзера
+message UserProfile {}
+
+// SearchByNicknameRequest - запрос на получение списка юзеров по никнейму
+message SearchByNicknameRequest {
+  // запрос
+  string query = 1 [json_name = "query"];
+  // пагинация количества
+  int32 limit = 2 [json_name = "limit"];
+}
+
+// SearchByNicknameResponse - ответ на получение списка юзеров по никнейму
+message SearchByNicknameResponse {
+  repeated UserProfile results = 1;
+}
