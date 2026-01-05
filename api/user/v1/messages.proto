@@ -18,28 +18,22 @@ message SearchByNicknameResponse {
 }
 
 message CreateProfileRequest{
-  int64  user_id = 1;
-  string nickname = 2;
-  optional string bio = 3;
-  optional string avatar_url = 4;
+  UserProfile user_profile = 1;
 }
 
 message UserProfile{
-  int64 user_id = 1;
+  string user_id = 1;
   string nickname = 2;
   optional string bio = 3;
   optional string avatar_url = 4;
 }
 
 message GetProfileByIDRequest{
-  int32 id = 1;
+  string id = 1;
 }
 
 message UpdateProfileRequest {
-  string user_id = 1;
-  optional string nickname = 2;
-  optional string bio = 3;
-  optional string avatar_url = 4;
+  UserProfile user_profile = 1;
 }
 
 message GetProfileByNicknameRequest {
