@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package UserService.api.user.v1;
 
-option go_package = "proto/pkg/api/user;user";
+option go_package = "UserService/proto/api/user/v1;v1";
 
 // SearchByNicknameRequest - запрос на получение списка юзеров по никнейму
 message SearchByNicknameRequest {
