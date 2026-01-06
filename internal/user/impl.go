@@ -1,7 +1,7 @@
 package user
 
 import (
-	pb "UserService/proto/pkg/api/user"
+	pb "UserService/proto"
 	"context"
 	"fmt"
 	"log"

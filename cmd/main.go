@@ -2,7 +2,7 @@ package main
 
 import (
 	"UserService/internal/user"
-	pb "UserService/proto/pkg/api/user"
+	pb "UserService/proto"
 	"log"
 	"net"
 
