@@ -13,10 +13,10 @@ service UserService {
   rpc SearchByNickname(SearchByNicknameRequest) returns (SearchByNicknameResponse) {}
 
   // CreateProfile - create profile
-  rpc CreateProfile(CreateProfileRequest) returns (UserProfile){}
+  rpc CreateProfile(CreateProfileRequest) returns (CreateProfileResponse){}
 
   // GetGetProfileByID - get profile by id
-  rpc GetProfileByID(GetProfileByIDRequest) returns (UserProfile){}
+  rpc GetProfileByID(GetProfileByIDRequest) returns (GetProfileByIDResponse){}
 
   // Обновляет профиль пользователя
   // Принимает UpdateProfileRequest и возвращает UpdateProfileResponse

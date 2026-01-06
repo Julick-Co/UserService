@@ -28,8 +28,16 @@ message UserProfile{
   optional string avatar_url = 4;
 }
 
+message CreateProfileResponse{
+  UserProfile user_profile = 1;
+}
+
 message GetProfileByIDRequest{
   string id = 1;
+}
+
+message GetProfileByIDResponse{
+  UserProfile user_profile = 1;
 }
 
 message UpdateProfileRequest {
