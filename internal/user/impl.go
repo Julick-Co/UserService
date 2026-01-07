@@ -61,3 +61,36 @@ func (s *UserServiceImpl) GetProfileByID(ctx context.Context,
 		},
 	}, nil
 }
+
+func (s *UserServiceImpl) UpdateProfile(ctx context.Context, req *pb.UpdateProfileRequest,
+) (*pb.UpdateProfileResponse, error) {
+
+	log.Println("Достучался до метода")
+
+	bio := "Bio"
+	avatarUrl := "AvatarUrl"
+
+	return &pb.UpdateProfileResponse{UserProfile: &pb.UserProfile{
+		UserId:    "3213",
+		Nickname:  "Nick",
+		Bio:       &bio,
+		AvatarUrl: &avatarUrl,
+	},
+	}, nil
+}
+
+func (s *UserServiceImpl) GetProfileByNickname(ctx context.Context, req *pb.GetProfileByNicknameRequest,
+) (*pb.GetProfileByNicknameResponse, error) {
+
+	log.Println("Достучался до метода")
+	bio := "Bio"
+	avatarUrl := "AvatarUrl"
+	return &pb.GetProfileByNicknameResponse{
+		UserProfile: &pb.UserProfile{
+			UserId:    "123",
+			Nickname:  "Nick",
+			Bio:       &bio,
+			AvatarUrl: &avatarUrl,
+		},
+	}, nil
+}
