@@ -12,4 +12,4 @@ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 ```
 
 ```bash
-$ protoc --proto_path=./api --go_out=. --go-grpc_out=. api/user/v1/messages.proto api/user/v1/service.proto
+$ protoc -I api/v1/user --go_out=. --go-grpc_out=. api/v1/user/user_messages.proto api/v1/user/user_service.proto

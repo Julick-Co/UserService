@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package UserService.api.user.v1;
+package UserService.api.v1.user;
 
-import "messages.proto";
+import "user_messages.proto";
 
-option go_package = "proto/api/user/v1;v1";
+option go_package = "proto/api/v1/user;user";
 
 // UserService - сервис управлением юзеров
 service UserService {
